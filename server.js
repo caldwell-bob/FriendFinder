@@ -9,6 +9,9 @@ var jsonParser = bodyParser.json();
 
 var urlencodedParser = bodyParser.urlencoded({ extended: false});
 
+require("./app/routing/htmlRoutes.js")(app);
+require("./app/routing/apiRoutes.js")(app);
+
 app.use(bodyParser.json({ type:  'application/*+json' }));
 app.use(bodyParser.raw({ type:  'application/vnd.custom-type' }));
 app.use(bodyParser.text({ type:  'text/html' }));
