@@ -63,7 +63,8 @@ myRoutes = function(app) {
          totalDelta = 0;
          // TODO loop through each friends scores array
          for (let i = 0; i < friend.scores.length; i++) {
-             totalDelta += usersScores[i] - friend.scores[i];
+            totalDelta += usersScores[i] - friend.scores[i];
+            // totalDelta = Math.abs(totalDelta);
             //  const arrSum = arr => arr.reduce((a,b) => a + b, 0)
 
             //  console.log("totalDelta: " + totalDelta);
@@ -82,6 +83,7 @@ myRoutes = function(app) {
 
             
          };
+         totalDelta = Math.abs(totalDelta);
          console.log("totalDelta for user: " + friend.name + "was " + totalDelta);
          if (totalDelta <= theMatchedOne.friendDelta) {
             // console.log("New theMatchedOne: " + friend.name);
