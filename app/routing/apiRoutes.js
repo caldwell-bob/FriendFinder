@@ -84,7 +84,7 @@ myRoutes = function(app) {
             
          };
          totalDelta = Math.abs(totalDelta);
-         console.log("totalDelta for user: " + friend.name + "was " + totalDelta);
+         console.log("totalDelta for user: " + friend.name + " was " + totalDelta);
          if (totalDelta <= theMatchedOne.friendDelta) {
             // console.log("New theMatchedOne: " + friend.name);
             theMatchedOne.name = friend.name;
